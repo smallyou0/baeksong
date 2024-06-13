@@ -676,6 +676,9 @@ legend,
 .pb150 {
   padding-bottom: 15.0rem;
 }
+.pb170 {
+  padding-bottom: 17.0rem;
+}
 
 .px0 {
   padding: 0;
@@ -922,7 +925,7 @@ legend,
 
 /* 메인 */
 .main {
-  padding-top: 9.4rem;
+  padding-top: 7.3rem;
 }
 .main {
   &.pt20 {
@@ -1602,7 +1605,7 @@ button {
   font-weight: 500;
 }
 .input-type input:focus {
-  outline: 2px solid var(--navy1d);
+  outline: 0;
 }
 
 .input-type .label-file {

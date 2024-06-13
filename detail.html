@@ -11,13 +11,13 @@
   </head>
   <body class="bg-white">
     <header class="header-sub block">
-      <div class="align triple bg-f8 border-bottom">
+      <div class="align triple bg-white">
         <a class="btn-back" href="javascript:window.history.back();"></a>
         <h2>매물 상세</h2>
         <div></div>
       </div>
     </header>
-    <main class="main pb150">
+    <main class="main pb170">
       <section class="content">
         <div class="img-wrap2">
           <img src="../images/@img_bs_detail.png" alt="">
@@ -67,13 +67,13 @@
         </div>
         <div class="text-type4 fz18 px16 pt40">교통 정보</div>
         <ul class="list-type8 grid3 px16 pt10 scroll-x pb10 pt24">
-          <li class="radius-10 btn-area gray ratio2 active" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2 active">
             <div class="text-type4 text-center">최소시간</div>
           </li>
-          <li class="radius-10 btn-area gray ratio2" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2">
             <div class="text-type4 text-center">지하철</div>
           </li>
-          <li class="radius-10 btn-area gray ratio2" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2">
             <div class="text-type4 text-center">버스</div>
           </li>
         </ul>
@@ -85,13 +85,13 @@
         </div>
         <div class="text-type4 fz18 px16 pt40">학군 정보</div>
         <ul class="list-type8 grid3 px16 pt10 scroll-x pb10 pt24">
-          <li class="radius-10 btn-area gray ratio2 active" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2 active">
             <div class="text-type4 text-center">초등학교</div>
           </li>
-          <li class="radius-10 btn-area gray ratio2" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2">
             <div class="text-type4 text-center">중학교</div>
           </li>
-          <li class="radius-10 btn-area gray ratio2" onclick="alert('준비중입니다')">
+          <li class="radius-10 btn-area gray ratio2">
             <div class="text-type4 text-center">고등학교</div>
           </li>
         </ul>
@@ -103,9 +103,9 @@
         <div class="img-wrap2 px16 pt24">
           <img src="../images/@img_bs_detail5.png" alt="">
         </div>
-        <div class="fixed-bottom align bg-white w100 px16 pt8 pb8 mb51 w100" style="z-index: 400;">
-          <img src="images/ico_heart.svg" alt="">
-          <button class="btn-main-on w100 ml5" type="button">문의하기</button>
+        <div class="fixed-bottom align bg-white w100 px16 pt8 pb8 mb51 w100" style="z-index: 400; max-width: 500px;">
+          <img class="btn-heart" src="images/ico_heart.svg" alt="">
+          <button class="btn-main-on w100 ml5" type="button" onclick="alert('준비중입니다')">문의하기</button>
         </div>
       </section>
       <div class="nav-foot">
@@ -119,6 +119,21 @@
         </nav>
       </div>
     </main>
+    <script>
+      $('.btn-heart').click(function() {
+          var img = $(this);
+          var src = img.attr('src');
+
+          if (src.includes('ico_heart.svg')) {
+              img.attr('src', 'images/ico_heart_active.svg');
+          } else {
+              img.attr('src', 'images/ico_heart.svg');
+          }
+      });
+      $('.btn-area').click(function() {
+        $(this).toggleClass('active')
+      })
+  </script>
   </body>
   <script src="js/button.js"></script>
   <script src="js/navFoot.js"></script>
